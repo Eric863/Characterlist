@@ -1,0 +1,6 @@
+@GameCharacterList_HostAddress = http://localhost:5147
+
+GET {{GameCharacterList_HostAddress}}
+Accept: application/json
+
+###

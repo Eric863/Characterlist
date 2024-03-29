@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewData["Title"] = "Weapons";
+}
+
+<h1>Weapons</h1>
+
+<style>
+    .form-group {
+        padding-top: 7px; /* Set your desired top padding here */
+        padding-bottom: 7px; /* Set your desired bottom padding here */
+    }
+
+    .control-label {
+        font-size: 1em;
+        font-weight: bold;
+    }
+</style>
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<div class="form-group">
+    <label asp-for="Name" class="control-label"></label>
+    <input asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Weapons" class="control-label"><b>Weapons</b></label>
+    <br />
+    <select asp-for="Weapons" asp-items="@ViewBag.Weapons"></select>
+    <span asp-validation-for="Weapons" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Damage" class="control-label">Damage</label>
+    <input asp-for="Damage" class="form-control" placeholder="Ex. the 8 in 2d8" />
+    <span asp-validation-for="Damage" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="CritDamage" class="control-label">CritDamage</label>
+    <input asp-for="CritDamage" class="form-control" placeholder="Ex. the 2 in 2d8" />
+    <span asp-validation-for="CritDamage" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="CritDamage" class="control-label">Bonus Damage</label>
+    <input asp-for="CritDamage" class="form-control" placeholder="Ex. the 1 in 2d8+1" />
+    <span asp-validation-for="CritDamage" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <input type="submit" value="Submit" class="btn btn-primary" />
+</div>
